@@ -13,6 +13,7 @@ type IconConfig = {
   networkName: string;
   /** SVG path */
   path: string;
+  path2?: string;
 };
 
 export default function createIcon(iconConfig: IconConfig) {
@@ -39,6 +40,7 @@ export default function createIcon(iconConfig: IconConfig) {
       )}
 
       <path d={iconConfig.path} fill={iconFillColor} />
+      {iconConfig.path2 && <path d={iconConfig.path2} fill={iconFillColor} />}
     </svg>
   );
 

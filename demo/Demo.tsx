@@ -51,6 +51,12 @@ import {
   InstapaperIcon,
   WeiboIcon,
   HatenaIcon,
+  QQZoneIcon,
+  QQZoneShareButton,
+  QQIcon,
+  QQShareButton,
+  WechatIcon,
+  WechatShareButton,
 } from '../src';
 
 import './Demo.css';
@@ -310,6 +316,39 @@ class Demo extends Component {
           <div>
             <HatenaShareCount url={shareUrl} className="Demo__some-network__share-count" />
           </div>
+        </div>
+
+        <div className="Demo__some-network">
+          <QQShareButton
+            url={shareUrl}
+            title={title}
+            image={`${String(window.location)}/${exampleImage}`}
+            className="Demo__some-network__share-button"
+          >
+            <QQIcon size={32} round />
+          </QQShareButton>
+        </div>
+
+        <div className="Demo__some-network">
+          <QQZoneShareButton
+            url={shareUrl}
+            title={title}
+            image={`${String(window.location)}/${exampleImage}`}
+            className="Demo__some-network__share-button"
+          >
+            <QQZoneIcon size={32} round />
+          </QQZoneShareButton>
+        </div>
+
+        <div className="Demo__some-network">
+          <WechatShareButton
+            url={shareUrl}
+            title={title}
+            image={`${String(window.location)}/${exampleImage}`}
+            className="Demo__some-network__share-button"
+          >
+            <WechatIcon size={32} round />
+          </WechatShareButton>
         </div>
       </div>
     );
